@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import url(responsive.scss);
 
-
- $white_opaque: rgba(250, 250, 250, .3);
- $dark: #1F7972;
+ $white_opaque: rgba(250, 250, 250, 0.3);
+ $w-white: white;
+ $b-blue: #004487;
 
 * {
 	box-sizing: border-box;
@@ -27,11 +28,7 @@ html {
 
 body {
  	height: 100%;
-  background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:    -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  background-color:  $b-blue;
   font-family: 'Lato', sans-serif;
 }
 
@@ -48,7 +45,7 @@ body {
 #notice {
 	text-align: center;
 	font-size: 0.6em;
-	color: $dark;
+	color: $w-white;
 	font-weight: 100;
 }
 
@@ -68,11 +65,11 @@ body {
 	font-weight: 700;
 	font-size: 2.5rem;
 	text-transform: uppercase;
-	color: white;
+	color: $w-white;
 	margin: 0;
 	a {
 		text-decoration: none;
-		color: white;
+		color: $w-white;
 		transition: all .4s ease-in-out;
 		&:hover {
 			opacity: 0.4;
@@ -84,7 +81,7 @@ body {
 	margin: 0 0 3em 0;
 	text-align: center;
 	font-size: 0.9em;
-	color: $dark;
+	color: $w-white;
 	font-weight: 100;
 }
 
@@ -114,7 +111,7 @@ body {
 			p {
 				margin: 0;
 				padding: 1em;
-				color: $dark;
+				color: $w-white;
 				font-weight: 100;
 			}
 		}
@@ -126,10 +123,10 @@ body {
 			padding: 1em 0;
 		}
 		i {
-			color: white;
+			color: $w-white;
 			transition: all .4s ease-in-out;
 			&:hover {
-				color: $dark;
+				color: $w-white;
 			}
 		}
 	}
@@ -148,7 +145,7 @@ body {
 			padding: 1em 2em;
 		}
 		input[type="submit"] {
-			background: rgba(250,250,250,.4);
+			background: #004487;
 			outline: none;
 			border: none;
 			height: 40px;
@@ -156,12 +153,14 @@ body {
 			width: 25%;
 			display: inline-block;
 			transition: all .4s ease-in-out;
+			color: $w-white;
 			cursor: pointer;
 			&:hover {
-				background: $dark;
+				background: $w-white;
+				color: $b-blue;
 			}
 		}
-		::-webkit-input-placeholder { color: $dark; }
+		::-webkit-input-placeholder { color: $w-white; }
 	}
 }
 
@@ -170,17 +169,22 @@ body {
 	margin: 1.5em auto 0 auto;
 	text-align: center;
 	font-size: 0.8em;
-	color: white;
+	color: $w-white;
+	text-align: center;
 	a {
-		color: white;
+		color: $w-white;
+		&:hover{
+			color: $b-blue;
+		}
 	}
-}
+	}
+	
 
 .forms {
 	padding: 0 5%;
 }
 label {
-	color: $dark;
+	color: $w-white;
 }
 input[type="text"], textarea {
 	width: 100%;
@@ -206,9 +210,9 @@ input[type="submit"] {
 	display: inline-block;
 	transition: all .4s ease-in-out;
 	cursor: pointer;
-	color: $dark;
+	color: #004487;
 	&:hover {
-		background: $dark;
-		color: white;
+		background: #004487;
+		color: $w-white;
     }
 }

@@ -1,0 +1,8 @@
+$break-small: 480px;
+
+
+.container {
+  @media screen and (min-width: $break-small) {
+    width: 85% !important;
+  }
+}
